@@ -1,0 +1,12 @@
+.wrapper {
+    margin-left: 5%;
+    margin-top: 2rem;
+    height: 60%;
+    width: 90%;
+    overflow: auto;
+}
+
+::-webkit-scrollbar {
+   display: none;
+}
+

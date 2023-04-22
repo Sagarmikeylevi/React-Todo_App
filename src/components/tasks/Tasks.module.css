@@ -1,0 +1,54 @@
+.wrapper {
+    margin-top: 0.5rem;
+    margin-left: 5%;
+    height: 2.5rem;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 5px;
+    background:#00004d;
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.checkBox {
+    margin-left: 0.5rem;
+    margin-right: 0.6rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    border: 1px solid#9999ff;
+    background:#8000ff;
+    /* opacity: 0.8; */
+}
+
+.checkBox .check {
+    color: aliceblue;
+    font-size: 0.6rem;
+    opacity: 0.8;
+    /* display: none; */
+}
+
+.wrapper p {
+    width: 80%;
+    font-size: small;
+    font-weight: 300;
+    /* color: aliceblue; */
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.8;
+}
+
+.delete {
+    font-size: small;
+    color: lightcyan;
+    opacity: 0.8;
+}
+
+
+
