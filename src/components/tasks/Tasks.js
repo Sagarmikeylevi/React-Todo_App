@@ -2,7 +2,7 @@ import { useState } from 'react';
 import classes from './Tasks.module.css';
 import {FaCheck, FaTrash} from 'react-icons/fa';
 
-const Tasks = () => {
+const Tasks = (props) => {
     const [isChecked, setIsChecked] = useState(false);
 
     const checkedTaskHandler = () => {
@@ -25,7 +25,7 @@ const Tasks = () => {
           <FaCheck className={isCheckedTask} />
         </div>
 
-        <p className={isCheckedPara}>Complete the react project</p>
+        <p className={isCheckedPara}>{props.title}</p>
 
         <FaTrash className={classes.delete} />
       </div>

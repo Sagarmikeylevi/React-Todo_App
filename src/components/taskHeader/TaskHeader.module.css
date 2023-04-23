@@ -46,5 +46,9 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.emptyState {
+    font-size: small;
+    color: rgb(187, 108, 108);
+}
 
 
