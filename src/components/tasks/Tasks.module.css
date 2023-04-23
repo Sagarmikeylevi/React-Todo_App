@@ -23,26 +23,41 @@
     width: 1rem;
     border-radius: 50%;
     border: 1px solid#9999ff;
-    background:#8000ff;
-    /* opacity: 0.8; */
+    opacity: 0.8;
 }
+
+.checkedBox {
+     background:#8000ff;
+}
+
+
 
 .checkBox .check {
     color: aliceblue;
     font-size: 0.6rem;
     opacity: 0.8;
-    /* display: none; */
+    visibility: hidden;
 }
+
+.checkBox .checked {
+    visibility: visible;
+}
+
+
 
 .wrapper p {
     width: 80%;
     font-size: small;
     font-weight: 300;
-    /* color: aliceblue; */
-    text-decoration: line-through;
-    color: gray;
+    color: aliceblue;
     opacity: 0.8;
 }
+
+.wrapper .checkedPara {
+    text-decoration: line-through;
+     color: gray;
+}
+
 
 .delete {
     font-size: small;

@@ -7,10 +7,6 @@ const TaskStorage = () => {
         <Tasks />
         <Tasks />
         <Tasks />
-        <Tasks />
-        <Tasks />
-        <Tasks />
-        <Tasks />
       </div>
     );
 }
