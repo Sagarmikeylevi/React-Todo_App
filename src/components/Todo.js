@@ -25,12 +25,22 @@ const Todo = () => {
 
         fetchHandler();
     }, []);
+
+    const taskHandler = (title) => {
+        const taskDetails = {
+            key: Math.random().toString(),
+            title: title,
+            checked: false
+        }
+        console.log(taskDetails);
+        setTask(prevState => [taskDetails, ...prevState]);
+    }
     return (
-        <div className={classes.wrapper}>
-            <TaskHeader />
-            <TaskStorage tasks={task} />
-        </div>
-    )
+      <div className={classes.wrapper}>
+        <TaskHeader onGetTaks={taskHandler} />
+        <TaskStorage tasks={task} />
+      </div>
+    );
 }
 
 export default Todo;
