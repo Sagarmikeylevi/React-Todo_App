@@ -27,7 +27,7 @@ const Tasks = (props) => {
 
         <p className={isCheckedPara}>{props.title}</p>
 
-        <FaTrash className={classes.delete} />
+        <FaTrash className={classes.delete}  onClick={() => props.onDelete()} />
       </div>
     );
 }

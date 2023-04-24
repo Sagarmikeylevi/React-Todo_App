@@ -4,7 +4,7 @@ import TaskHeader from './taskHeader/TaskHeader';
 import TaskStorage from './tasks/TaskStorage';
 
 const Todo = () => {
-    const [task, setTask] = useState([]);
+    const [tasks, setTasks] = useState([]);
     useEffect(() => {
         const fetchHandler = async () => {
             const response = await fetch(
@@ -19,7 +19,7 @@ const Todo = () => {
               checked: task.completed,
             }));
             
-            setTask(taskDetails);
+            setTasks(taskDetails);
             
         }
 
@@ -33,12 +33,17 @@ const Todo = () => {
             checked: false
         }
         console.log(taskDetails);
-        setTask(prevState => [taskDetails, ...prevState]);
+        setTasks(prevState => [taskDetails, ...prevState]);
+    }
+
+    const deleteHandler = (key) => {
+        const updatedTask = tasks.filter(task => task.key !== key);
+        setTasks(updatedTask);
     }
     return (
       <div className={classes.wrapper}>
         <TaskHeader onGetTaks={taskHandler} />
-        <TaskStorage tasks={task} />
+        <TaskStorage tasks={tasks} onDelete={deleteHandler} />
       </div>
     );
 }
