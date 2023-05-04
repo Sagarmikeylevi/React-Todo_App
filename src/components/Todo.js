@@ -7,10 +7,12 @@ const Todo = () => {
   const [tasks, setTasks] = useState([]);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+
+  // Fetch data from an API endpoint when the component mounts
   useEffect(() => {
     const fetchHandler = async () => {
-        setIsLoading(true);
-        setError(false);
+      setIsLoading(true);
+      setError(false);
       try {
         const response = await fetch(
           "https://jsonplaceholder.typicode.com/todos"
@@ -22,6 +24,7 @@ const Todo = () => {
 
         const data = await response.json();
 
+        // Extract relevant information from the fetched data and set it in the state
         const taskDetails = data.slice(0, 3).map((task) => ({
           key: task.id,
           title: task.title,
@@ -38,7 +41,7 @@ const Todo = () => {
     fetchHandler();
   }, []);
 
-
+  // Handle creating a new task
   const taskHandler = async (title) => {
     const taskDetails = {
       key: Math.random().toString(),
@@ -46,9 +49,10 @@ const Todo = () => {
       checked: false,
     };
 
+    // Update the state to include the new task
     setTasks((prevState) => [taskDetails, ...prevState]);
 
-    // --- demo post req ----
+    // Example of how to make a POST request to an API endpoint
     // try {
     //   const response = await fetch(
     //     "https://jsonplaceholder.typicode.com/todos",
@@ -74,11 +78,13 @@ const Todo = () => {
     // }
   };
 
+  // Handle deleting a task
   const deleteHandler = async (key) => {
+    // Update the state to remove the deleted task
     const updatedTask = tasks.filter((task) => task.key !== key);
     setTasks(updatedTask);
 
-    // --- demo delete req --- 
+    // Example of how to make a DELETE request to an API endpoint
     // try {
     //   await fetch("https://jsonplaceholder.typicode.com/todos" + `/${key}`, {
     //     method: "DELETE",
@@ -94,6 +100,7 @@ const Todo = () => {
     // }
   };
 
+  // Render loading state
   if (isLoading) {
     return (
       <section className={classes.loadingstate}>
@@ -102,16 +109,14 @@ const Todo = () => {
     );
   }
 
-
-
-  if(error) {
+  // Render error state
+  if (error) {
     return (
       <section className={classes.errorstate}>
         <p>{error}</p>
       </section>
     );
   }
-
 
   return (
     <div className={classes.wrapper}>
