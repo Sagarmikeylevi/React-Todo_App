@@ -29,3 +29,6 @@ The Todo App is built using the following technologies:
 
 ## Deployment
 Project already deployed on Render. Visit: https://sagarmikeylevi-todoapp.netlify.app/
+
+## Video
+Link: https://www.youtube.com/watch?v=IFJyFJmyoRY
