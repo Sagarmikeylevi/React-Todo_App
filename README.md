@@ -19,6 +19,7 @@ The Todo App is built using the following technologies:
 - HTML: The markup language for creating the structure and layout of the user interface.
 - CSS: The styling language used to enhance the visual appearance of the Todo App.
 
+![TodoAPP](https://github.com/Sagarmikeylevi/React-Todo_App/assets/114811573/e33b23e4-8a84-4e33-b224-81c32f167e07)
 
 
 ## Installation
